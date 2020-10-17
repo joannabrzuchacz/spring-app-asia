@@ -1,6 +1,12 @@
-public class App {
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-    public static void main(String[] args) {
-        System.out.println("Hello Heroku app!");
+
+
+    @RestController
+    public class App {
+    @RequestMapping("/")
+    String home() {
+        return "Hello Heroku!";
     }
 }
